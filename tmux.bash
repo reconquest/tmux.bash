@@ -2,7 +2,7 @@ tmux:cat-screen() {
     local session=$1
     shift
 
-    tmux capture-pane "-pt" "$session"
+    tmux capture-pane "-pt" "$session" "${@:--e}"
 }
 
 tmux:new-session() {
