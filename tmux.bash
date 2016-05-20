@@ -23,7 +23,7 @@ tmux:has-session() {
     local session=$1
     shift
 
-    tmux has-session -t "$session"
+    tmux has-session -t "$session" 2>/dev/null
 }
 
 tmux:send-raw() {
